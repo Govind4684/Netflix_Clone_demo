@@ -55,7 +55,13 @@ const Profiles = () => {
                                 text-center
                                 group-hover:text-white
                             ">
-                                {user?.name.substring(0, user?.name.indexOf(' '))}
+                                {
+                                    user?.name
+                                    ? (user.name.indexOf(' ') !== -1 
+                                    ? user.name.substring(0, user.name.indexOf(' ')) 
+                                    : user.name) 
+                                    : ''
+                                }
                             </div>
                         </div>
                     </div>
